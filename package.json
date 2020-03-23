@@ -1,0 +1,43 @@
+{
+  "name": "gandalf",
+  "description": "High configurable banner for blocking internet explorer users",
+  "version": "1.0.0",
+  "author": "Giulio Fagioli <fagioli.giulio@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "microbundle --jsx h --no-sourcemap --external none",
+    "dev": "microbundle watch --jsx h --no-sourcemap --external none",
+    "test": "yarn mocha --require @babel/register,ignore-styles,jsdom-global/register test/**/*.js",
+    "release": "yarn build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && yarn publish",
+    "size": "echo \"gzip size: $(gzip-size $npm_package_main)\""
+  },
+  "source": "src/index.js",
+  "main": "dist/bundle.umd.js",
+  "module": "dist/bundle.module.js",
+  "unpkg": "dist/bundle.umd.js",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@babel/plugin-transform-react-jsx": "^7.9.1",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "chai": "^4.2.0",
+    "gzip-size-cli": "^3.0.0",
+    "ignore-styles": "^5.0.1",
+    "jsdom": "^16.2.1",
+    "jsdom-global": "^3.0.2",
+    "microbundle": "0.12.0-next.8",
+    "mocha": "^7.1.1",
+    "vhtml": "^2.2.0"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "keywords": [
+    "internet explorer blocker",
+    "ie",
+    "blocker",
+    "gandalf"
+  ]
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/bundle.css">
+  <script src="./dist/bundle.umd.js"></script>
+  <title>Gandalf | Internet Explorer Blocker</title>
+  <style>
+
+    body{
+      margin: 0;
+    }
+
+    .btn{
+      display: inline-block;
+      font-weight: 400;
+      color: #212529;
+      text-align: center;
+      vertical-align: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-color: transparent;
+      border: 1px solid transparent;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: .25rem;
+      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    } 
+
+    .btn-primary{
+      background-color: coral;
+      color: white;
+      text-decoration: none;
+    }
+
+
+  </style>
+</head>
+
+<body style="height: 100vh; background-color: bisque;">
+</body>
+<footer>
+  <script defer>
+    let settings = {
+      "content":{
+        "title": "Internet Explorer isn't supported | Gandalf",
+        "explanation": "We don't provide support for this browser",
+      },
+      "browsers": [
+          {
+            "name": "Chrome",
+            "link": "https://www.google.com/intl/en/chrome/",
+            "download_text": "Download Chrome",
+            "classes": ["btn","btn-primary"]
+          },
+          {
+            "name": "Firefox",
+            "link": "https://www.mozilla.org/firefox/new/",
+            "download_text": "Download Firefox",
+            "classes": ["btn","btn-primary"]
+          }
+      ],
+      "styles":{
+        "wrapper": ["ieblocker__wrapper"],
+        "modal": ["ieblocker__modal"],
+        "buttons_wrapper": ["ieblocker__buttons-wrapper"]
+      }
+    };
+
+    blockIe(settings)
+  </script>
+</footer>
+
+</html>
