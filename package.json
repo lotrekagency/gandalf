@@ -12,9 +12,9 @@
     "size": "echo \"gzip size: $(gzip-size $npm_package_main)\""
   },
   "source": "src/index.js",
-  "main": "dist/bundle.umd.js",
-  "module": "dist/bundle.module.js",
-  "unpkg": "dist/bundle.umd.js",
+  "main": "dist/gandalf.umd.js",
+  "module": "dist/gandalf.module.js",
+  "unpkg": "dist/gandalf.umd.js",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-optional-chaining": "^7.9.0",
